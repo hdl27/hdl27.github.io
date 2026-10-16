@@ -1,37 +1,58 @@
+Here is the complete **[index.html](/Users/anda.skeja/Documents/Codex/2026-10-16/i-ma/outputs/index.html)**, with all styling included. Put **[poster.jpg](/Users/anda.skeja/Documents/Codex/2026-10-16/i-ma/outputs/poster.jpg)** in the same folder.
+
+```html
 <!doctype html>
 <html lang="en">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+
   <title>SHDL27 · Learning over Structured High-Dimensional Objects</title>
-  <meta name="description" content="Learning over Structured High-Dimensional Objects: Theory and Complexity. Bernoulli Center, EPFL, 15 March–23 April 2027.">
+
+  <meta
+    name="description"
+    content="Learning over Structured High-Dimensional Objects: Theory and Complexity. Bernoulli Center, EPFL, 15 March–23 April 2027."
+  >
 
   <style>
-    * { box-sizing: border-box; }
+    :root {
+      --navy: #17152b;
+      --red: #8a2347;
+      --yellow: #ebed69;
+      --paper: #f7f5df;
+      --teal: #23695f;
+      --rule: #d4cfae;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
 
     body {
       margin: 0;
-      background: #fff;
-      color: #252525;
+      border-top: 6px solid var(--yellow);
+      background: var(--paper);
+      color: var(--navy);
       font: 17px/1.65 Georgia, "Times New Roman", serif;
     }
 
     a {
-      color: #204e73;
+      color: var(--red);
       text-underline-offset: 3px;
     }
 
     a:hover {
+      color: var(--navy);
       text-decoration-thickness: 2px;
     }
 
     a:focus-visible {
-      outline: 2px solid #204e73;
+      outline: 2px solid var(--navy);
       outline-offset: 4px;
     }
 
     .page {
-      max-width: 980px;
+      max-width: 1040px;
       margin: auto;
       padding: 0 28px;
     }
@@ -45,7 +66,7 @@
       left: 16px;
       top: 12px;
       padding: 8px;
-      background: #fff;
+      background: var(--paper);
     }
 
     .site-header {
@@ -54,13 +75,14 @@
       justify-content: space-between;
       gap: 20px;
       padding: 24px 0 18px;
-      border-bottom: 1px solid #d8d8d8;
+      border-bottom: 2px solid var(--navy);
     }
 
     .site-name {
-      color: inherit;
+      color: var(--navy);
       font-size: 23px;
       text-decoration: none;
+      border-bottom: 3px solid var(--yellow);
     }
 
     nav {
@@ -70,15 +92,24 @@
       font: 14px/1.6 Arial, sans-serif;
     }
 
+    nav a {
+      color: var(--navy);
+    }
+
+    nav a:hover {
+      color: var(--red);
+    }
+
     .intro {
       display: grid;
-      grid-template-columns: minmax(0, 1fr) 176px;
+      grid-template-columns: minmax(0, 1fr) 240px;
       align-items: start;
       gap: 44px;
       padding: 44px 0 36px;
     }
 
-    h1, h2 {
+    h1,
+    h2 {
       font-weight: normal;
     }
 
@@ -88,14 +119,40 @@
       line-height: 1.2;
     }
 
+    h2 {
+      margin: 0;
+      color: var(--red);
+      font-size: 23px;
+      line-height: 1.35;
+    }
+
+    h3 {
+      margin: 24px 0 8px;
+      font-size: 17px;
+    }
+
+    p {
+      margin: 0 0 14px;
+    }
+
     .subtitle {
       margin: 0 0 24px;
+      color: var(--teal);
       font-size: 24px;
+      font-style: italic;
       line-height: 1.35;
     }
 
     .event-details {
       margin: 0;
+    }
+
+    .event-details strong {
+      display: inline-block;
+      margin-bottom: 6px;
+      padding: 2px 6px;
+      background: var(--yellow);
+      color: var(--navy);
     }
 
     .poster {
@@ -106,7 +163,7 @@
       display: block;
       width: 100%;
       height: auto;
-      border: 1px solid #ddd;
+      border: 1px solid var(--rule);
     }
 
     .poster figcaption {
@@ -119,23 +176,8 @@
       grid-template-columns: 172px minmax(0, 1fr);
       gap: 32px;
       padding: 28px 0;
-      border-top: 1px solid #d8d8d8;
+      border-top: 1px solid var(--rule);
       scroll-margin-top: 20px;
-    }
-
-    h2 {
-      margin: 0;
-      font-size: 23px;
-      line-height: 1.35;
-    }
-
-    h3 {
-      margin: 24px 0 8px;
-      font-size: 17px;
-    }
-
-    p {
-      margin: 0 0 14px;
     }
 
     .section p:last-child {
@@ -157,13 +199,13 @@
     }
 
     .affiliation {
-      color: #555;
+      color: #545466;
     }
 
     footer {
-      border-top: 1px solid #d8d8d8;
+      border-top: 2px solid var(--red);
       padding: 20px 0 32px;
-      color: #555;
+      color: #545466;
       font: 13px/1.6 Arial, sans-serif;
     }
 
@@ -196,7 +238,7 @@
       }
 
       .poster {
-        width: 150px;
+        width: min(100%, 240px);
       }
 
       .section {
@@ -207,12 +249,20 @@
     }
 
     @media print {
+      body {
+        background: #fff;
+        color: #000;
+        border-top: 0;
+      }
+
       .page {
         max-width: none;
         padding: 0;
       }
 
-      nav, .skip, .poster {
+      nav,
+      .skip,
+      .poster {
         display: none;
       }
 
@@ -221,8 +271,15 @@
         padding: 24px 0;
       }
 
-      a {
-        color: inherit;
+      a,
+      h1,
+      h2,
+      .subtitle {
+        color: #000;
+      }
+
+      .event-details strong {
+        background: none;
       }
 
       .section {
@@ -251,6 +308,7 @@
       <div class="intro">
         <div>
           <h1>Learning over Structured High-Dimensional Objects</h1>
+
           <p class="subtitle">Theory and Complexity</p>
 
           <p class="event-details">
@@ -261,16 +319,17 @@
         </div>
 
         <figure class="poster">
-          <a href="poster.pdf">
+          <a href="poster.jpg">
             <img
-              src="poster.svg"
-              width="660"
-              height="900"
-              alt="SHDL27 programme poster (PDF)">
+              src="poster.jpg"
+              width="1131"
+              height="1600"
+              alt="Programme poster: Learning over Structured High-Dimensional Objects — Theory and Complexity. Bernoulli Center, EPFL, 15 March–23 April 2027. Organisers: Anda Skeja and Fiona Skerman."
+            >
           </a>
 
           <figcaption>
-            <a href="poster.pdf">Programme poster (PDF)</a>
+            <a href="poster.jpg">View full-size poster</a>
           </figcaption>
         </figure>
       </div>
@@ -278,8 +337,8 @@
       <section
         class="section"
         id="programme"
-        aria-labelledby="programme-title">
-
+        aria-labelledby="programme-title"
+      >
         <h2 id="programme-title">Programme</h2>
 
         <div>
@@ -305,8 +364,8 @@
       <section
         class="section"
         id="people"
-        aria-labelledby="people-title">
-
+        aria-labelledby="people-title"
+      >
         <h2 id="people-title">People</h2>
 
         <div>
@@ -317,6 +376,7 @@
               <a href="https://anda-skeja.com/">Anda Skeja</a>
               <span class="affiliation">(Uppsala University)</span>
             </li>
+
             <li>
               <a href="https://fskerman.github.io/">Fiona Skerman</a>
               <span class="affiliation">(Uppsala University)</span>
@@ -324,6 +384,7 @@
           </ul>
 
           <h3>Participants</h3>
+
           <p>The participant list will be announced here.</p>
         </div>
       </section>
@@ -331,8 +392,8 @@
       <section
         class="section"
         id="schedule"
-        aria-labelledby="schedule-title">
-
+        aria-labelledby="schedule-title"
+      >
         <h2 id="schedule-title">Schedule</h2>
 
         <div>
@@ -343,8 +404,8 @@
       <section
         class="section"
         id="apply"
-        aria-labelledby="apply-title">
-
+        aria-labelledby="apply-title"
+      >
         <h2 id="apply-title">Applications</h2>
 
         <div>
@@ -374,6 +435,7 @@
             <a href="https://www.cimpa.info/fr/node/8256">
               Eligibility and instructions
             </a><br>
+
             <a href="https://applications.cimpa.info/">
               CIMPA application portal
             </a>
@@ -388,3 +450,4 @@
   </div>
 </body>
 </html>
+```
