@@ -16,6 +16,8 @@
       --ink: #1f2328;
       --accent: #3c6e71;
       --accent-dark: #2d5557;
+      --heading: #0b3023;
+      --burgundy: #7b3048;
       --paper: #fbfaf7;
       --highlight: #e1ece7;
       --rule: #e6e2da;
@@ -113,20 +115,21 @@
 
     h1 {
       margin: 0 0 10px;
+      color: var(--heading);
       font-size: 38px;
       line-height: 1.2;
     }
 
     h2 {
       margin: 0;
-      color: var(--accent);
+      color: var(--heading);
       font-size: 23px;
       line-height: 1.35;
     }
 
     h3 {
       margin: 24px 0 8px;
-      color: var(--accent-dark);
+      color: var(--heading);
       font-size: 17px;
     }
 
@@ -152,6 +155,11 @@
       padding: 3px 8px;
       background: var(--highlight);
       color: var(--ink);
+    }
+
+    .venue,
+    .deadline {
+      color: var(--burgundy);
     }
 
     .poster {
@@ -275,7 +283,9 @@
       h2,
       h3,
       .subtitle,
-      .event-details strong {
+      .event-details strong,
+      .venue,
+      .deadline {
         color: #000;
       }
 
@@ -308,14 +318,19 @@
     <main id="main">
       <div class="intro">
         <div>
-          <h1>Learning over Structured High-Dimensional Objects</h1>
+          <h1>
+            Learning over Structured<br>
+            High-Dimensional Objects
+          </h1>
 
           <p class="subtitle">Theory and Complexity</p>
 
           <p class="event-details">
             <strong>15 March–23 April 2027</strong><br>
-            Bernoulli Center, EPFL<br>
-            Lausanne, Switzerland
+            <span class="venue">
+              Bernoulli Center, EPFL<br>
+              Lausanne, Switzerland
+            </span>
           </p>
         </div>
 
@@ -427,7 +442,7 @@
             researchers based in developing countries.
           </p>
 
-          <p>
+          <p class="deadline">
             Application deadline: <strong>15 November 2026</strong>.
           </p>
 
