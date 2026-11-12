@@ -113,11 +113,27 @@
       border: 1px solid var(--rule);
     }
 
-    .landscape-poster figcaption {
-      margin-top: 10px;
-      text-align: center;
-      font: 13px/1.5 Arial, sans-serif;
-    }
+    
+.landscape-poster {
+  width: min(94%, 920px);
+  margin: 24px auto 32px;
+}
+
+.landscape-poster img {
+  display: block;
+  width: 100%;
+  aspect-ratio: 2.5 / 1;
+  object-fit: cover;
+  object-position: center;
+  border: 1px solid var(--rule);
+}
+
+.landscape-poster figcaption {
+  margin-top: 10px;
+  text-align: center;
+  font: 13px/1.5 Arial, sans-serif;
+}
+
 
     /* Keep the programme title accessible without repeating the poster text. */
     .visually-hidden {
